@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #131313;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1200px;
+    transform-style: preserve-3d;
+}
+.container .box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    background: #232323;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+}
+.container .box::before{
+    content: 'NIKE';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 6em;
+    font-weight: 900;
+    font-style: italic;
+    color: white;
+    opacity: 0;
+    transition: .5s;
+}
+.container .box::after{
+    content: 'SHOES';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 5em;
+    font-weight: 900;
+    font-style: italic;
+    color: white;
+    opacity: 0;
+    transition: .5s;
+}
+.container .box:hover::before, 
+.container .box:hover::after{
+    opacity: .04;
+}
+.container .box .name{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    color: white;
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 75px);
+    z-index: 10;
+    transition: .5s;
+    opacity: 0;
+}
+.container .box:hover .name{
+    opacity: 1;
+    top: 30px;
+}
+.container .box .buy{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, 0, 75px);
+    color: white;
+    background: #333333;
+    padding: 10px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: .5s;
+    z-index: 10;
+    opacity: 0;
+}
+.container .box:hover .buy{
+    bottom: 20px;
+    opacity: 1;
+}
+.container .box .circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, -50%, 50px);
+    width: 200px;
+    height: 200px;
+    background: white;
+    border-radius: 50%;
+    z-index: 10;
+    transition: .5s;
+}
+.container .box:nth-child(1) .buy,
+.container .box:nth-child(1) .circle{
+    background: rgb(49, 154, 180);
+}
+.container .box:nth-child(2) .buy,
+.container .box:nth-child(2) .circle{
+    background: rgb(76, 235, 56);
+}
+.container .box:nth-child(3) .buy,
+.container .box:nth-child(3) .circle{
+    background: rgb(180, 86, 49);
+}
+.container .box .product{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: .5s;
+    transform-style: preserve-3d;
+    z-index: 1000;
+    max-width: 300px;
+    transform: translate3d(-50%, -50%, 50px);
+}
+.container .box:hover .product{
+    transform: translate3d(-50%, -50%, 100px);
+}

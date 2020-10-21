@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Card Vanilla tilt effect.css">
+    <title>Card Vanilla Tilt Effect</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2 class="name">Product name</h2>
+            <a href="#" class="buy">Buy Now</a>
+            <div class="circle"></div>
+            <img src="code.png" alt="Product" class="product">
+        </div>
+        <div class="box">
+            <h2 class="name">Product name</h2>
+            <a href="#" class="buy">Buy Now</a>
+            <div class="circle"></div>
+            <img src="design.png" alt="Product" class="product">
+        </div>
+        <div class="box">
+            <h2 class="name">Product name</h2>
+            <a href="#" class="buy">Buy Now</a>
+            <div class="circle"></div>
+            <img src="money.png" alt="Product" class="product">
+        </div>
+    </div>
+    <script src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll('.box')), {
+            max: 25, 
+            speed: 400
+        }
+    </script>
+</body>
+</html>
